@@ -1,0 +1,15 @@
+{
+  "name": "ecommerce-microservicios",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Plataforma básica de comercio electrónico con cuatro microservicios independientes",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "install:all": "node scripts/each.js install",
+    "test:all": "node scripts/each.js test",
+    "start:all": "node scripts/start-all.js",
+    "e2e": "node scripts/e2e.js",
+    "chaos": "node scripts/chaos.js",
+    "load": "node scripts/load-test.js"
+  }
+}

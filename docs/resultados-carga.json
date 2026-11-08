@@ -1,0 +1,140 @@
+{
+  "fecha": "2026-11-03T16:08:04.007Z",
+  "entorno": {
+    "nodo": "v22.22.1",
+    "plataforma": "win32",
+    "cpu": "11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz",
+    "nucleos": 16,
+    "memoriaGB": 32,
+    "duracionPorEscenarioMs": 8000
+  },
+  "resultados": [
+    {
+      "escenario": "GET /products (1 instancia)",
+      "concurrencia": 1,
+      "peticiones": 14837,
+      "rps": 1855,
+      "p50_ms": 0.5,
+      "p95_ms": 0.8,
+      "p99_ms": 1.7,
+      "tasa_error": 0
+    },
+    {
+      "escenario": "GET /products (1 instancia)",
+      "concurrencia": 10,
+      "peticiones": 20700,
+      "rps": 2587,
+      "p50_ms": 3.8,
+      "p95_ms": 5.4,
+      "p99_ms": 6.3,
+      "tasa_error": 0
+    },
+    {
+      "escenario": "GET /products (1 instancia)",
+      "concurrencia": 50,
+      "peticiones": 20623,
+      "rps": 2573,
+      "p50_ms": 19.3,
+      "p95_ms": 23.1,
+      "p99_ms": 27.2,
+      "tasa_error": 0
+    },
+    {
+      "escenario": "GET /products (2 instancias)",
+      "concurrencia": 10,
+      "peticiones": 34659,
+      "rps": 4332,
+      "p50_ms": 2,
+      "p95_ms": 4.9,
+      "p99_ms": 6.7,
+      "tasa_error": 0
+    },
+    {
+      "escenario": "GET /products (2 instancias)",
+      "concurrencia": 50,
+      "peticiones": 35397,
+      "rps": 4420,
+      "p50_ms": 10.8,
+      "p95_ms": 22.4,
+      "p99_ms": 26.4,
+      "tasa_error": 0
+    },
+    {
+      "escenario": "POST /orders (saga completa)",
+      "concurrencia": 1,
+      "peticiones": 977,
+      "rps": 122,
+      "p50_ms": 8.7,
+      "p95_ms": 11.9,
+      "p99_ms": 13.8,
+      "tasa_error": 0
+    },
+    {
+      "escenario": "POST /orders (saga completa)",
+      "concurrencia": 10,
+      "peticiones": 1616,
+      "rps": 201,
+      "p50_ms": 49.2,
+      "p95_ms": 57.4,
+      "p99_ms": 61.7,
+      "tasa_error": 0
+    },
+    {
+      "escenario": "POST /orders (saga completa)",
+      "concurrencia": 25,
+      "peticiones": 1659,
+      "rps": 205,
+      "p50_ms": 120.8,
+      "p95_ms": 140.9,
+      "p99_ms": 155,
+      "tasa_error": 0
+    }
+  ],
+  "metricasInternas": {
+    "pedidos": {
+      "totals": {
+        "requests": 4252,
+        "clientErrors": 0,
+        "serverErrors": 0,
+        "errorRate": 0,
+        "latencyMs": {
+          "p50": 29.81,
+          "p95": 71.77,
+          "p99": 78.22
+        }
+      },
+      "counters": {
+        "orders_confirmed_total": 4252,
+        "outbox_delivered_total": 1388
+      },
+      "gauges": {
+        "outbox_pending": 2798,
+        "orders_pending": 19
+      },
+      "POST /orders": {
+        "requests": 4252,
+        "clientErrors": 0,
+        "serverErrors": 0,
+        "errorRate": 0,
+        "latencyMs": {
+          "p50": 29.81,
+          "p95": 71.77,
+          "p99": 78.22
+        }
+      }
+    },
+    "productos": {
+      "totals": {
+        "requests": 95491,
+        "clientErrors": 0,
+        "serverErrors": 0,
+        "errorRate": 0,
+        "latencyMs": {
+          "p50": 0.46,
+          "p95": 2.8,
+          "p99": 3.65
+        }
+      }
+    }
+  }
+}

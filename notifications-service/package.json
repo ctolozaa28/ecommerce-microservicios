@@ -1,0 +1,16 @@
+{
+  "name": "notifications-service",
+  "version": "1.0.0",
+  "description": "Microservicio de Notificaciones",
+  "private": true,
+  "main": "src/server.js",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test --experimental-test-coverage --test-coverage-include=src/**"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  }
+}
